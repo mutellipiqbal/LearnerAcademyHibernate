@@ -86,9 +86,6 @@ public class EntityDao {
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// start a transaction
 			transaction = session.beginTransaction();
-
-//			// delete the student object
-//			session.delete(student);
 			
 			teacherList=session.createQuery("from Teacher", Teacher.class).getResultList();
 			
@@ -103,6 +100,53 @@ public class EntityDao {
 		
 		
 		return teacherList;
+	}
+	
+	
+	public List<Course> getCourseList() {
+		
+		Transaction transaction = null;
+		List<Course> courseList=null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			// start a transaction
+			transaction = session.beginTransaction();
+			
+			courseList=session.createQuery("from Course", Course.class).getResultList();
+			
+			// commit transaction
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		}
+		
+		
+		return courseList;
+	}
+	
+	public List<ClassRoom> getClassRoom() {
+		
+		Transaction transaction = null;
+		List<ClassRoom> classRoomList=null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			// start a transaction
+			transaction = session.beginTransaction();
+			
+			classRoomList=session.createQuery("from ClassRoom", ClassRoom.class).getResultList();
+			
+			// commit transaction
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		}
+		
+		
+		return classRoomList;
 	}
 
 }

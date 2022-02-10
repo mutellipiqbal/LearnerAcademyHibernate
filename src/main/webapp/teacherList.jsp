@@ -10,19 +10,15 @@
 <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-image: url('css/background.jpg');">
-<%=request.getAttribute("teacherList")%>
-	<div id="page">
 
 
+<div id="page">
 		<div id="wrapper">
 
 			<div id="header">
-				<h3>Teachers</h3>
+				<h3>Teachers List</h3>
 			</div>
-		</div>
-		
-
-
+		</div>		
 		<div id="container">
 
 			<div id="content">
@@ -31,25 +27,22 @@
 					<tr>
 					    <th>Teacher id</th>
 						<th>Teacher Name</th>
-			
-
-					</tr>
-
-
-<c:forEach var="teacher" items="${teacherList}">
-						<tr>
-							<td>${teacher.id}</td>
-							<td>${teacher.teacherName}</td>
 						
-				
-							
-						</tr>
-					</c:forEach>
-					
-				</table>
+					</tr>				
+					 <%ArrayList<Teacher> teachers = 
+            (ArrayList<Teacher>)request.getAttribute("teacherList");
+        for(Teacher teacher:teachers){%>
+        <%-- Arranging data in tabular form
+        --%>
+            <tr>
+                <td><%=teacher.getId()%></td>
+                <td><%=teacher.getTeacherName()%></td>            
+            </tr>
+            <%}%>
+				</table>			
 			</div>
+        <hr/>
 		</div>
 	</div>
-
 </body>
 </html>

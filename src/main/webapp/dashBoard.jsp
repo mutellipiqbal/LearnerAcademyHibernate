@@ -27,9 +27,9 @@ body {
   width: 16%;
  
   padding-top: 50px;
-  padding-left: 10px;
+ 
   left:0;
-  background-color: #32DE84;
+  background-color: #48C9B0;
 }
 h2, h4, h6 {
   color:  #1F1A17;
@@ -72,8 +72,8 @@ input[type="checkbox"] {
 
 
 input[type=submit] {
-  width: 40%;
-  background-color: #4CAF50;
+  width: 60%;
+  background-color: #3498DB;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -93,33 +93,6 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.link-button-wrapper {
-    width: 200px;
-    height: 40px;
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
-    border-radius: 4px;
-    background-color: #097BC0;
-    box-shadow: 0px 2px 4px gray;
-    display: block;
-    border:1px solid #094BC0;
-   
-}
-.link-button-wrapper > a {
-    display: inline-table;
-    cursor: pointer;
-    text-decoration: none;
-    height: 100%;
-    width:100%;
-}
-.link-button-wrapper > a > h1 {
-    margin: 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-    color: #f7f8f8;
-    font-size: 18px;
-    font-family: cabinregular;
-    text-align: center;
-}
 </style>
 </head>
 <body>
@@ -135,29 +108,32 @@ input[type=submit]:hover {
 
 	%>
 
-<div class="split left">
-  <div class="link-button-wrapper">
+<div class="split left" align="center" >
+
+     <form action="studentList" >
+   <input type="submit" value="Student List"/>
+    </form>
+
+   <form action="teacherList" >
+   <input type="submit" value="Teacher List"/>
+  </form>
   
 
-    <div class="link-button-wrapper">
-      <a href="classroomList.jsp">
-        <h1>Classroom list</h1>
-  </a></div><br>
-  <div class="link-button-wrapper">
-      <a href="courseList.jsp">
-        <h1>Course list</h1>
-   </a></div><br>
-   <div class="link-button-wrapper">
-   <form action="list" method="get">
-   <input type="submit" value="teacher"/>
+     <form action="courseList" >
+   <input type="submit" value="Course List"/>
+    </form>
+
+   <form action="classroomList" >
+   <input type="submit" value="ClassRoom List"/>
   </form>
 
     
-    <form align="center" action="logout" >
+    <form  action="logout" >
       <input type="submit" value="Logout">
     </form><br>
 </div>
-</div>
+
+</class>
 
 <div class="split right">
   <div>

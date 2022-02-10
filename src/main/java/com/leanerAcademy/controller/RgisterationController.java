@@ -20,7 +20,7 @@ import com.leanerAcademy.entity.Teacher;
 
 
 @WebServlet("/registerStudent")
-public class StudentController extends HttpServlet{
+public class RgisterationController extends HttpServlet{
 	
 	private EntityDao entityDao;
 

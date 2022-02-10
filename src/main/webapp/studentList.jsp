@@ -10,51 +10,47 @@
 <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-image: url('css/background.jpg');">
-	<div id="page">
-
-
+	
+<div id="page">
 		<div id="wrapper">
 
-			<div id="header">
-				<h3>Students</h3>
+			<div id="students">
+				<h3>Students List</h3>
 			</div>
-		</div>
-		
-
-
+		</div>		
 		<div id="container">
 
 			<div id="content">
 
 				<table>
 					<tr>
-					    <th>id</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>age</th>
-						<th>email</th>
-						<th>gender</th>
-						<th>classRoom_id</th>
+					    <th>Student Id</th>
+						  <th>Student First Name</th>
+						    <th>Student Last Name</th>
+						      <th>Student Age</th>
+						        <th>Student Email</th>
+						          <th>Student Gender</th>  
 
-					</tr>
-					
-
-
-					<c:forEach var="student" items="${studentList}">
-						<tr>
-							<td>${student.id}</td>
-							<td>${student.firstName}</td>
-							<td>${student.lastName}</td>
-							<td>${student.age}</td>
-							<td>${student.email}</td>
-							<td>${student.gender}</td>
-							
-						</tr>
-					</c:forEach>
-				</table>
+					</tr>				
+					 <%ArrayList<Student> students = 
+            (ArrayList<Student>)request.getAttribute("studentList");
+        for(Student student:students){%>
+        <%-- Arranging data in tabular form
+        --%>
+            <tr>
+                <td><%=student.getId()%></td>
+                <td><%=student.getFirstName()%></td> 
+                 <td><%=student.getLastName()%></td>
+                  <td><%=student.getAge()%></td>
+                   <td><%=student.getEmail()%></td>
+                    <td><%=student.getGender()%></td>
+                            
+            </tr>
+            <%}%>
+				</table>			
 			</div>
+        <hr/>
 		</div>
 	</div>
-
 </body>
 </html>

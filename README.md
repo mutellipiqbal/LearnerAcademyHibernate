@@ -30,14 +30,17 @@ Flowcharts of The Application
 ![work flow](https://user-images.githubusercontent.com/32098494/153515897-f61953fd-8714-4e06-81da-5af16e18dada.jpg)
 
 
-How to run the program
+How to run the program?
+
 • clone project
 
 • Import the “learning academy database.sql” into MySql manament tool and execute query.
 
 • Go to index.xml” file and run it on Tomcat server.
 
-• To login, use admin as user name and password.
+• Go to HibernateUtil class to change user name and password for your database connection.
+
+• To login, use "admin" as user name and password.
 
 • Register a student in admin dashboard. 
 
@@ -51,7 +54,9 @@ How to run the program
 
 • Logout if you finish admin activity.
 
+
 Screenshots:
+
 ![admin portal 2](https://user-images.githubusercontent.com/32098494/153517306-bfd39a7b-2b4e-4f90-bbe7-41e2b0c18ad3.png)
 
 ![admin dashboard](https://user-images.githubusercontent.com/32098494/153517372-5e194017-daa9-401b-b488-bb69ecac42c1.png)

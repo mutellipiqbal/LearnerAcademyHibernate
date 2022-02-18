@@ -36,9 +36,9 @@ How to run the program?
 
 • Import the “learning academy database.sql” into MySql manament tool and execute query.
 
-• Go to index.xml” file and run it on Tomcat server.
-
 • Go to HibernateUtil class to change user name and password for your database connection.
+
+• Go to index.xml” file and run it on Tomcat server.
 
 • To login, use "admin" as user name and password.
 
